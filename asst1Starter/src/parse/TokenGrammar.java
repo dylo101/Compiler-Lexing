@@ -591,13 +591,13 @@ public class TokenGrammar implements wrangLR.runtime.MessageObject
     //: `extends ::= "extends" white*
     //: `void ::= "void" white*
     //: `int ::= "int" white*
-    //: `while ::= !{255} {255} => void
-    //: `if ::= !{255} {255} => void
-    //: `for ::= !{255} {255} => void
-    //: `break ::= !{255} {255} => void
-    //: `this ::= !{255} {255} => void
-    //: `false ::= !{255} {255} => void
-    //: `true ::= !{255} {255} => void
+    //: `while ::= "while" white*
+    //: `if ::= "if" white*
+    //: `for ::= "for" white*
+    //: `break ::= "break" white*
+    //: `this ::= "this" white*
+    //: `false ::= "false" white*
+    //: `true ::= "true" white*
     //: `super ::= !{255} {255} => void
     //: `null ::= !{255} {255} => void
     //: `return ::= !{255} {255} => void

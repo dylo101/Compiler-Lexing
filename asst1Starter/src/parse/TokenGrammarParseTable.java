@@ -14,8 +14,8 @@ errorMsg
 *
 ;
 public class TokenGrammarParseTable implements wrangLR.runtime.ParseTable {
-public int getEofSym() { return 138; }
-public int getNttSym() { return 139; }
+public int getEofSym() { return 144; }
+public int getNttSym() { return 145; }
 private String[] symNameTable = {
 "$$start",
 "start",
@@ -121,13 +121,19 @@ private String[] symNameTable = {
 "\"_\"",
 "\"d\"",
 "\"v\"",
+"\"f\"",
 "\"i\"",
-"{\"A\"..\"Z\" \"f\"..\"h\" \"j\"..\"k\" \"m\" \"p\"..\"r\" \"u\" \"w\" \"y\"..\"z\"}",
 "\"o\"",
+"\"r\"",
+"\"u\"",
 "\"x\"",
+"{\"A\"..\"Z\" \"g\" \"j\" \"m\" \"p\"..\"q\" \"y\"..\"z\"}",
 "\"b\"",
+"\"h\"",
+"\"k\"",
 "\"n\"",
 "\"t\"",
+"\"w\"",
 "{\"0\"..\"9\"}",
 "white",
 "{9 12 \" \"}",
@@ -163,8 +169,8 @@ public String symName(int n) {
 }
 private TokenGrammar actionObject;
 public int[][] getParseTable() { return parseTable; }
-public int numSymbols() { return 140;}
-private static final int MIN_REDUCTION = 234;
+public int numSymbols() { return 146;}
+private static final int MIN_REDUCTION = 269;
 public int minReduction() { return MIN_REDUCTION;}
 private static final int MAX_ACCEPT_REDUCTION = MIN_REDUCTION+1;
 public int maxAcceptReduction() { return MAX_ACCEPT_REDUCTION; }
@@ -197,143 +203,149 @@ public int doInit(int startIdx) {
 private final int[][] myParseTable = {
 { // state 0
 -1, // $$start
-64, // start
-43, // white*
-77, // $$0
-55, // token
-113, // `boolean
-171, // `class
-221, // `extends
-154, // `void
-186, // `int
-203, // `while
-133, // `if
-152, // `else
-61, // `for
-83, // `break
-54, // `this
-140, // `false
-29, // `true
-112, // `super
-52, // `null
-119, // `return
-87, // `instanceof
-149, // `new
-183, // `abstract
-57, // `assert
-90, // `byte
-91, // `case
-208, // `catch
-156, // `char
-49, // `const
-59, // `continue
-224, // `default
-38, // `do
-72, // `double
-131, // `enum
-220, // `final
+73, // start
+50, // white*
+88, // $$0
+63, // token
+126, // `boolean
+193, // `class
+252, // `extends
+173, // `void
+209, // `int
+228, // `while
+148, // `if
+171, // `else
+70, // `for
+94, // `break
+62, // `this
+156, // `false
+36, // `true
+125, // `super
+60, // `null
+132, // `return
+99, // `instanceof
+167, // `new
+206, // `abstract
+65, // `assert
+102, // `byte
+103, // `case
+234, // `catch
+175, // `char
+56, // `const
+67, // `continue
+256, // `default
+45, // `do
+83, // `double
+146, // `enum
+251, // `final
 5, // `finally
-228, // `float
-60, // `goto
-79, // `implements
-188, // `import
-204, // `interface
-39, // `long
-24, // `native
-231, // `package
-207, // `private
-137, // `protected
-22, // `public
-138, // `short
+261, // `float
+69, // `goto
+90, // `implements
+211, // `import
+229, // `interface
+46, // `long
+30, // `native
+266, // `package
+232, // `private
+153, // `protected
+28, // `public
+154, // `short
 4, // `static
-73, // `strictfp
-100, // `switch
-62, // `synchronized
-218, // `throw
-174, // `throws
-19, // `transient
-98, // `try
-209, // `volatile
-180, // `!
-147, // `!=
-40, // `%
-222, // `&&
-144, // `*
-177, // `(
-109, // `)
-158, // `{
-128, // `}
-21, // `-
-15, // `+
-172, // `=
-51, // `==
-122, // `[
-130, // `]
-92, // `||
-173, // `<
-157, // `<=
-217, // `,
-12, // `>
-47, // `>=
+84, // `strictfp
+114, // `switch
+71, // `synchronized
+248, // `throw
+196, // `throws
+24, // `transient
+111, // `try
+235, // `volatile
+202, // `!
+164, // `!=
+47, // `%
+254, // `&&
+161, // `*
+199, // `(
+122, // `)
+178, // `{
+142, // `}
+26, // `-
+19, // `+
+194, // `=
+58, // `==
+135, // `[
+145, // `]
+104, // `||
+195, // `<
+177, // `<=
+246, // `,
+16, // `>
+54, // `>=
 2, // `.
-182, // `;
-142, // `++
-191, // `--
-75, // `/
-53, // `:
-179, // ID
-27, // INT_LITERAL
-165, // STRING_LITERAL
-178, // CHAR_LITERAL
-145, // "c"
+205, // `;
+158, // `++
+215, // `--
+86, // `/
+61, // `:
+201, // ID
+34, // INT_LITERAL
+186, // STRING_LITERAL
+200, // CHAR_LITERAL
+162, // "c"
 -1, // "l"
 -1, // "a"
 -1, // "s"
 -1, // idChar
-103, // "e"
-219, // "!"
-30, // "="
-139, // "+"
-211, // digit++
+117, // "e"
+250, // "!"
+37, // "="
+155, // "+"
+238, // digit++
 -1, // letter
-193, // digit
+217, // digit
 -1, // "_"
 -1, // "d"
-115, // "v"
--1, // "i"
--1, // {"A".."Z" "f".."h" "j".."k" "m" "p".."r" "u" "w" "y".."z"}
+128, // "v"
+59, // "f"
+233, // "i"
 -1, // "o"
+-1, // "r"
+-1, // "u"
 -1, // "x"
-107, // "b"
+-1, // {"A".."Z" "g" "j" "m" "p".."q" "y".."z"}
+78, // "b"
+-1, // "h"
+-1, // "k"
 -1, // "n"
--1, // "t"
-135, // {"0".."9"}
-169, // white
-175, // {9 12 " "}
-8, // eol
-81, // {10}
-11, // {13}
-85, // "%"
-161, // "&"
-10, // "*"
-187, // "("
-176, // ")"
-68, // "{"
-106, // "}"
-198, // "-"
-76, // "["
-93, // "]"
-71, // "|"
-70, // "<"
-110, // ","
-13, // ">"
-196, // ":"
-170, // "."
-96, // ";"
-65, // "/"
+170, // "t"
+107, // "w"
+150, // {"0".."9"}
+191, // white
+197, // {9 12 " "}
+9, // eol
+92, // {10}
+14, // {13}
+96, // "%"
+181, // "&"
+11, // "*"
+210, // "("
+198, // ")"
+77, // "{"
+120, // "}"
+223, // "-"
+87, // "["
+105, // "]"
+82, // "|"
+81, // "<"
+123, // ","
+17, // ">"
+220, // ":"
+192, // "."
+109, // ";"
+74, // "/"
 -1, // {255}
-56, // token*
-86, // digit+
+64, // token*
+97, // digit+
 MIN_REDUCTION+1, // $
 -1, // $NT
   }
@@ -346,11 +358,11 @@ MIN_REDUCTION+79, // (default reduction)
   }
 ,
 { // state 3
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
 MIN_REDUCTION+115, // (default reduction)
   }
 ,
@@ -367,1605 +379,1855 @@ MIN_REDUCTION+2, // (default reduction)
   }
 ,
 { // state 7
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
 MIN_REDUCTION+109, // (default reduction)
   }
 ,
 { // state 8
-MIN_REDUCTION+105, // (default reduction)
+2,15, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+168, // (default reduction)
   }
 ,
 { // state 9
-2,17, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+162, // (default reduction)
+MIN_REDUCTION+105, // (default reduction)
   }
 ,
 { // state 10
-2,3, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+116, // (default reduction)
+2,21, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+162, // (default reduction)
   }
 ,
 { // state 11
-0x80000000|143, // match move
-0x80000000|26, // no-match move
-// T-test match for 10:
-115,
+2,3, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+116, // (default reduction)
   }
 ,
 { // state 12
-MIN_REDUCTION+77, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+175, // (default reduction)
   }
 ,
 { // state 13
-0x80000000|212, // match move
-0x80000000|155, // no-match move
-// T-test match for "=":
-96,
+90,112, // "l"
   }
 ,
 { // state 14
-2,226, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+96, // (default reduction)
+0x80000000|160, // match move
+0x80000000|32, // no-match move
+// T-test match for 10:
+121,
   }
 ,
 { // state 15
-MIN_REDUCTION+68, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+167, // (default reduction)
   }
 ,
 { // state 16
-MIN_REDUCTION+108, // (default reduction)
+MIN_REDUCTION+77, // (default reduction)
   }
 ,
 { // state 17
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+161, // (default reduction)
-  }
-,
-{ // state 18
-2,117, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+164, // (default reduction)
-  }
-,
-{ // state 19
-MIN_REDUCTION+55, // (default reduction)
-  }
-,
-{ // state 20
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+143, // (default reduction)
-  }
-,
-{ // state 21
-MIN_REDUCTION+67, // (default reduction)
-  }
-,
-{ // state 22
-MIN_REDUCTION+47, // (default reduction)
-  }
-,
-{ // state 23
-94,28, // "e"
-  }
-,
-{ // state 24
-MIN_REDUCTION+43, // (default reduction)
-  }
-,
-{ // state 25
-2,33, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+138, // (default reduction)
-  }
-,
-{ // state 26
-MIN_REDUCTION+108, // (default reduction)
-  }
-,
-{ // state 27
-MIN_REDUCTION+86, // (default reduction)
-  }
-,
-{ // state 28
-0x80000000|1, // match move
-0x80000000|214, // no-match move
-0x80000000|46, // NT-test-match state for idChar
-  }
-,
-{ // state 29
-MIN_REDUCTION+17, // (default reduction)
-  }
-,
-{ // state 30
-0x80000000|50, // match move
-0x80000000|200, // no-match move
+0x80000000|239, // match move
+0x80000000|174, // no-match move
 // T-test match for "=":
 96,
   }
 ,
+{ // state 18
+2,258, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+96, // (default reduction)
+  }
+,
+{ // state 19
+MIN_REDUCTION+68, // (default reduction)
+  }
+,
+{ // state 20
+MIN_REDUCTION+108, // (default reduction)
+  }
+,
+{ // state 21
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+161, // (default reduction)
+  }
+,
+{ // state 22
+2,130, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+164, // (default reduction)
+  }
+,
+{ // state 23
+115,182, // "t"
+  }
+,
+{ // state 24
+MIN_REDUCTION+55, // (default reduction)
+  }
+,
+{ // state 25
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+143, // (default reduction)
+  }
+,
+{ // state 26
+MIN_REDUCTION+67, // (default reduction)
+  }
+,
+{ // state 27
+90,166, // "l"
+  }
+,
+{ // state 28
+MIN_REDUCTION+47, // (default reduction)
+  }
+,
+{ // state 29
+94,35, // "e"
+  }
+,
+{ // state 30
+MIN_REDUCTION+43, // (default reduction)
+  }
+,
 { // state 31
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+121, // (default reduction)
+2,40, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+138, // (default reduction)
   }
 ,
 { // state 32
-MIN_REDUCTION+216, // (default reduction)
+MIN_REDUCTION+108, // (default reduction)
   }
 ,
 { // state 33
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+137, // (default reduction)
+2,144, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+172, // (default reduction)
   }
 ,
 { // state 34
-109,126, // "n"
+MIN_REDUCTION+86, // (default reduction)
   }
 ,
 { // state 35
-110,111, // "t"
+0x80000000|1, // match move
+0x80000000|242, // no-match move
+0x80000000|53, // NT-test-match state for idChar
   }
 ,
 { // state 36
-97,164, // "+"
+MIN_REDUCTION+17, // (default reduction)
   }
 ,
 { // state 37
-104,168, // "i"
+0x80000000|57, // match move
+0x80000000|225, // no-match move
+// T-test match for "=":
+96,
   }
 ,
 { // state 38
-MIN_REDUCTION+32, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+121, // (default reduction)
   }
 ,
 { // state 39
-MIN_REDUCTION+42, // (default reduction)
+MIN_REDUCTION+224, // (default reduction)
   }
 ,
 { // state 40
-MIN_REDUCTION+60, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+137, // (default reduction)
   }
 ,
 { // state 41
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+139, // (default reduction)
+114,140, // "n"
   }
 ,
 { // state 42
-90,58, // "l"
+115,124, // "t"
   }
 ,
 { // state 43
+97,185, // "+"
+  }
+,
+{ // state 44
+105,190, // "i"
+  }
+,
+{ // state 45
+MIN_REDUCTION+32, // (default reduction)
+  }
+,
+{ // state 46
+MIN_REDUCTION+42, // (default reduction)
+  }
+,
+{ // state 47
+MIN_REDUCTION+60, // (default reduction)
+  }
+,
+{ // state 48
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+139, // (default reduction)
+  }
+,
+{ // state 49
+90,66, // "l"
+  }
+,
+{ // state 50
 -1, // $$start
 -1, // start
 -1, // white*
 6, // $$0
-55, // token
-113, // `boolean
-171, // `class
-221, // `extends
-154, // `void
-186, // `int
-203, // `while
-133, // `if
-152, // `else
-61, // `for
-83, // `break
-54, // `this
-140, // `false
-29, // `true
-112, // `super
-52, // `null
-119, // `return
-87, // `instanceof
-149, // `new
-183, // `abstract
-57, // `assert
-90, // `byte
-91, // `case
-208, // `catch
-156, // `char
-49, // `const
-59, // `continue
-224, // `default
-38, // `do
-72, // `double
-131, // `enum
-220, // `final
+63, // token
+126, // `boolean
+193, // `class
+252, // `extends
+173, // `void
+209, // `int
+228, // `while
+148, // `if
+171, // `else
+70, // `for
+94, // `break
+62, // `this
+156, // `false
+36, // `true
+125, // `super
+60, // `null
+132, // `return
+99, // `instanceof
+167, // `new
+206, // `abstract
+65, // `assert
+102, // `byte
+103, // `case
+234, // `catch
+175, // `char
+56, // `const
+67, // `continue
+256, // `default
+45, // `do
+83, // `double
+146, // `enum
+251, // `final
 5, // `finally
-228, // `float
-60, // `goto
-79, // `implements
-188, // `import
-204, // `interface
-39, // `long
-24, // `native
-231, // `package
-207, // `private
-137, // `protected
-22, // `public
-138, // `short
+261, // `float
+69, // `goto
+90, // `implements
+211, // `import
+229, // `interface
+46, // `long
+30, // `native
+266, // `package
+232, // `private
+153, // `protected
+28, // `public
+154, // `short
 4, // `static
-73, // `strictfp
-100, // `switch
-62, // `synchronized
-218, // `throw
-174, // `throws
-19, // `transient
-98, // `try
-209, // `volatile
-180, // `!
-147, // `!=
-40, // `%
-222, // `&&
-144, // `*
-177, // `(
-109, // `)
-158, // `{
-128, // `}
-21, // `-
-15, // `+
-172, // `=
-51, // `==
-122, // `[
-130, // `]
-92, // `||
-173, // `<
-157, // `<=
-217, // `,
-12, // `>
-47, // `>=
+84, // `strictfp
+114, // `switch
+71, // `synchronized
+248, // `throw
+196, // `throws
+24, // `transient
+111, // `try
+235, // `volatile
+202, // `!
+164, // `!=
+47, // `%
+254, // `&&
+161, // `*
+199, // `(
+122, // `)
+178, // `{
+142, // `}
+26, // `-
+19, // `+
+194, // `=
+58, // `==
+135, // `[
+145, // `]
+104, // `||
+195, // `<
+177, // `<=
+246, // `,
+16, // `>
+54, // `>=
 2, // `.
-182, // `;
-142, // `++
-191, // `--
-75, // `/
-53, // `:
-179, // ID
-27, // INT_LITERAL
-165, // STRING_LITERAL
-178, // CHAR_LITERAL
-145, // "c"
+205, // `;
+158, // `++
+215, // `--
+86, // `/
+61, // `:
+201, // ID
+34, // INT_LITERAL
+186, // STRING_LITERAL
+200, // CHAR_LITERAL
+162, // "c"
 -1, // "l"
 -1, // "a"
 -1, // "s"
 -1, // idChar
-103, // "e"
-219, // "!"
-30, // "="
-139, // "+"
-211, // digit++
+117, // "e"
+250, // "!"
+37, // "="
+155, // "+"
+238, // digit++
 -1, // letter
-193, // digit
+217, // digit
 -1, // "_"
 -1, // "d"
-115, // "v"
--1, // "i"
--1, // {"A".."Z" "f".."h" "j".."k" "m" "p".."r" "u" "w" "y".."z"}
+128, // "v"
+59, // "f"
+233, // "i"
 -1, // "o"
+-1, // "r"
+-1, // "u"
 -1, // "x"
-107, // "b"
+-1, // {"A".."Z" "g" "j" "m" "p".."q" "y".."z"}
+78, // "b"
+-1, // "h"
+-1, // "k"
 -1, // "n"
--1, // "t"
-135, // {"0".."9"}
-184, // white
-175, // {9 12 " "}
-8, // eol
-81, // {10}
-11, // {13}
-85, // "%"
-161, // "&"
-10, // "*"
-187, // "("
-176, // ")"
-68, // "{"
-106, // "}"
-198, // "-"
-76, // "["
-93, // "]"
-71, // "|"
-70, // "<"
-110, // ","
-13, // ">"
-196, // ":"
-170, // "."
-96, // ";"
-65, // "/"
+170, // "t"
+107, // "w"
+150, // {"0".."9"}
+207, // white
+197, // {9 12 " "}
+9, // eol
+92, // {10}
+14, // {13}
+96, // "%"
+181, // "&"
+11, // "*"
+210, // "("
+198, // ")"
+77, // "{"
+120, // "}"
+223, // "-"
+87, // "["
+105, // "]"
+82, // "|"
+81, // "<"
+123, // ","
+17, // ">"
+220, // ":"
+192, // "."
+109, // ";"
+74, // "/"
 -1, // {255}
-56, // token*
-86, // digit+
+64, // token*
+97, // digit+
 MIN_REDUCTION+3, // $
 -1, // $NT
   }
 ,
-{ // state 44
-102,89, // "d"
-  }
-,
-{ // state 45
-MIN_REDUCTION+220, // (default reduction)
-  }
-,
-{ // state 46
-89,116, // "c"
-90,116, // "l"
-91,116, // "a"
-92,116, // "s"
-94,116, // "e"
-99,199, // letter
-100,102, // digit
-101,223, // "_"
-102,116, // "d"
-103,116, // "v"
-104,116, // "i"
-105,116, // {"A".."Z" "f".."h" "j".."k" "m" "p".."r" "u" "w" "y".."z"}
-106,116, // "o"
-107,116, // "x"
-108,116, // "b"
-109,116, // "n"
-110,116, // "t"
-111,114, // {"0".."9"}
-  }
-,
-{ // state 47
-MIN_REDUCTION+78, // (default reduction)
-  }
-,
-{ // state 48
-2,129, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+130, // (default reduction)
-  }
-,
-{ // state 49
-MIN_REDUCTION+29, // (default reduction)
-  }
-,
-{ // state 50
-96,48, // "="
-  }
-,
 { // state 51
-MIN_REDUCTION+70, // (default reduction)
+102,101, // "d"
   }
 ,
 { // state 52
-MIN_REDUCTION+19, // (default reduction)
+MIN_REDUCTION+228, // (default reduction)
   }
 ,
 { // state 53
-MIN_REDUCTION+84, // (default reduction)
+89,129, // "c"
+90,129, // "l"
+91,129, // "a"
+92,129, // "s"
+94,129, // "e"
+99,224, // letter
+100,116, // digit
+101,255, // "_"
+102,129, // "d"
+103,129, // "v"
+104,129, // "f"
+105,129, // "i"
+106,129, // "o"
+107,129, // "r"
+108,129, // "u"
+109,129, // "x"
+110,129, // {"A".."Z" "g" "j" "m" "p".."q" "y".."z"}
+111,129, // "b"
+112,129, // "h"
+113,129, // "k"
+114,129, // "n"
+115,129, // "t"
+116,129, // "w"
+117,127, // {"0".."9"}
   }
 ,
 { // state 54
-MIN_REDUCTION+15, // (default reduction)
+MIN_REDUCTION+78, // (default reduction)
   }
 ,
 { // state 55
-MIN_REDUCTION+217, // (default reduction)
+2,143, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+130, // (default reduction)
   }
 ,
 { // state 56
+MIN_REDUCTION+29, // (default reduction)
+  }
+,
+{ // state 57
+96,55, // "="
+  }
+,
+{ // state 58
+MIN_REDUCTION+70, // (default reduction)
+  }
+,
+{ // state 59
+91,27, // "a"
+106,159, // "o"
+  }
+,
+{ // state 60
+MIN_REDUCTION+19, // (default reduction)
+  }
+,
+{ // state 61
+MIN_REDUCTION+84, // (default reduction)
+  }
+,
+{ // state 62
+MIN_REDUCTION+15, // (default reduction)
+  }
+,
+{ // state 63
+MIN_REDUCTION+225, // (default reduction)
+  }
+,
+{ // state 64
 -1, // $$start
 -1, // start
 -1, // white*
 -1, // $$0
-32, // token
-113, // `boolean
-171, // `class
-221, // `extends
-154, // `void
-186, // `int
-203, // `while
-133, // `if
-152, // `else
-61, // `for
-83, // `break
-54, // `this
-140, // `false
-29, // `true
-112, // `super
-52, // `null
-119, // `return
-87, // `instanceof
-149, // `new
-183, // `abstract
-57, // `assert
-90, // `byte
-91, // `case
-208, // `catch
-156, // `char
-49, // `const
-59, // `continue
-224, // `default
-38, // `do
-72, // `double
-131, // `enum
-220, // `final
+39, // token
+126, // `boolean
+193, // `class
+252, // `extends
+173, // `void
+209, // `int
+228, // `while
+148, // `if
+171, // `else
+70, // `for
+94, // `break
+62, // `this
+156, // `false
+36, // `true
+125, // `super
+60, // `null
+132, // `return
+99, // `instanceof
+167, // `new
+206, // `abstract
+65, // `assert
+102, // `byte
+103, // `case
+234, // `catch
+175, // `char
+56, // `const
+67, // `continue
+256, // `default
+45, // `do
+83, // `double
+146, // `enum
+251, // `final
 5, // `finally
-228, // `float
-60, // `goto
-79, // `implements
-188, // `import
-204, // `interface
-39, // `long
-24, // `native
-231, // `package
-207, // `private
-137, // `protected
-22, // `public
-138, // `short
+261, // `float
+69, // `goto
+90, // `implements
+211, // `import
+229, // `interface
+46, // `long
+30, // `native
+266, // `package
+232, // `private
+153, // `protected
+28, // `public
+154, // `short
 4, // `static
-73, // `strictfp
-100, // `switch
-62, // `synchronized
-218, // `throw
-174, // `throws
-19, // `transient
-98, // `try
-209, // `volatile
-180, // `!
-147, // `!=
-40, // `%
-222, // `&&
-144, // `*
-177, // `(
-109, // `)
-158, // `{
-128, // `}
-21, // `-
-15, // `+
-172, // `=
-51, // `==
-122, // `[
-130, // `]
-92, // `||
-173, // `<
-157, // `<=
-217, // `,
-12, // `>
-47, // `>=
+84, // `strictfp
+114, // `switch
+71, // `synchronized
+248, // `throw
+196, // `throws
+24, // `transient
+111, // `try
+235, // `volatile
+202, // `!
+164, // `!=
+47, // `%
+254, // `&&
+161, // `*
+199, // `(
+122, // `)
+178, // `{
+142, // `}
+26, // `-
+19, // `+
+194, // `=
+58, // `==
+135, // `[
+145, // `]
+104, // `||
+195, // `<
+177, // `<=
+246, // `,
+16, // `>
+54, // `>=
 2, // `.
-182, // `;
-142, // `++
-191, // `--
-75, // `/
-53, // `:
-179, // ID
-27, // INT_LITERAL
-165, // STRING_LITERAL
-178, // CHAR_LITERAL
-145, // "c"
+205, // `;
+158, // `++
+215, // `--
+86, // `/
+61, // `:
+201, // ID
+34, // INT_LITERAL
+186, // STRING_LITERAL
+200, // CHAR_LITERAL
+162, // "c"
 -1, // "l"
 -1, // "a"
 -1, // "s"
 -1, // idChar
-103, // "e"
-219, // "!"
-30, // "="
-139, // "+"
-211, // digit++
+117, // "e"
+250, // "!"
+37, // "="
+155, // "+"
+238, // digit++
 -1, // letter
-193, // digit
+217, // digit
 -1, // "_"
 -1, // "d"
-115, // "v"
--1, // "i"
--1, // {"A".."Z" "f".."h" "j".."k" "m" "p".."r" "u" "w" "y".."z"}
+128, // "v"
+59, // "f"
+233, // "i"
 -1, // "o"
+-1, // "r"
+-1, // "u"
 -1, // "x"
-107, // "b"
+-1, // {"A".."Z" "g" "j" "m" "p".."q" "y".."z"}
+78, // "b"
+-1, // "h"
+-1, // "k"
 -1, // "n"
--1, // "t"
-135, // {"0".."9"}
+170, // "t"
+107, // "w"
+150, // {"0".."9"}
 -1, // white
 -1, // {9 12 " "}
 -1, // eol
 -1, // {10}
 -1, // {13}
-85, // "%"
-161, // "&"
-10, // "*"
-187, // "("
-176, // ")"
-68, // "{"
-106, // "}"
-198, // "-"
-76, // "["
-93, // "]"
-71, // "|"
-70, // "<"
-110, // ","
-13, // ">"
-196, // ":"
-170, // "."
-96, // ";"
-65, // "/"
+96, // "%"
+181, // "&"
+11, // "*"
+210, // "("
+198, // ")"
+77, // "{"
+120, // "}"
+223, // "-"
+87, // "["
+105, // "]"
+82, // "|"
+81, // "<"
+123, // ","
+17, // ">"
+220, // ":"
+192, // "."
+109, // ";"
+74, // "/"
 -1, // {255}
 -1, // token*
-86, // digit+
-MIN_REDUCTION+223, // $
+97, // digit+
+MIN_REDUCTION+231, // $
 -1, // $NT
   }
 ,
-{ // state 57
+{ // state 65
 MIN_REDUCTION+24, // (default reduction)
   }
 ,
-{ // state 58
-94,225, // "e"
-  }
-,
-{ // state 59
-MIN_REDUCTION+30, // (default reduction)
-  }
-,
-{ // state 60
-MIN_REDUCTION+38, // (default reduction)
-  }
-,
-{ // state 61
-MIN_REDUCTION+13, // (default reduction)
-  }
-,
-{ // state 62
-MIN_REDUCTION+52, // (default reduction)
-  }
-,
-{ // state 63
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+159, // (default reduction)
-  }
-,
-{ // state 64
-138,MIN_REDUCTION+0, // $
-  }
-,
-{ // state 65
-2,153, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+158, // (default reduction)
-  }
-,
 { // state 66
-96,82, // "="
+94,257, // "e"
   }
 ,
 { // state 67
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+89, // (default reduction)
+MIN_REDUCTION+30, // (default reduction)
   }
 ,
 { // state 68
-2,31, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+122, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+173, // (default reduction)
   }
 ,
 { // state 69
-MIN_REDUCTION+221, // (default reduction)
+MIN_REDUCTION+38, // (default reduction)
   }
 ,
 { // state 70
-0x80000000|66, // match move
-0x80000000|25, // no-match move
+MIN_REDUCTION+13, // (default reduction)
+  }
+,
+{ // state 71
+MIN_REDUCTION+52, // (default reduction)
+  }
+,
+{ // state 72
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+159, // (default reduction)
+  }
+,
+{ // state 73
+144,MIN_REDUCTION+0, // $
+  }
+,
+{ // state 74
+2,172, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+158, // (default reduction)
+  }
+,
+{ // state 75
+96,93, // "="
+  }
+,
+{ // state 76
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+89, // (default reduction)
+  }
+,
+{ // state 77
+2,38, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+122, // (default reduction)
+  }
+,
+{ // state 78
+106,165, // "o"
+107,204, // "r"
+  }
+,
+{ // state 79
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+165, // (default reduction)
+  }
+,
+{ // state 80
+MIN_REDUCTION+229, // (default reduction)
+  }
+,
+{ // state 81
+0x80000000|75, // match move
+0x80000000|31, // no-match move
 // T-test match for "=":
 96,
   }
 ,
-{ // state 71
-127,201, // "|"
-  }
-,
-{ // state 72
-MIN_REDUCTION+33, // (default reduction)
-  }
-,
-{ // state 73
-MIN_REDUCTION+50, // (default reduction)
-  }
-,
-{ // state 74
-111,114, // {"0".."9"}
-  }
-,
-{ // state 75
-MIN_REDUCTION+83, // (default reduction)
-  }
-,
-{ // state 76
-2,160, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+132, // (default reduction)
-  }
-,
-{ // state 77
-MIN_REDUCTION+4, // (default reduction)
-  }
-,
-{ // state 78
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+119, // (default reduction)
-  }
-,
-{ // state 79
-MIN_REDUCTION+39, // (default reduction)
-  }
-,
-{ // state 80
-0x80000000|197, // match move
-0x80000000|97, // no-match move
-0x80000000|74, // NT-test-match state for digit
-  }
-,
-{ // state 81
-MIN_REDUCTION+106, // (default reduction)
-  }
-,
 { // state 82
-2,41, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+140, // (default reduction)
+133,226, // "|"
   }
 ,
 { // state 83
-MIN_REDUCTION+14, // (default reduction)
+MIN_REDUCTION+33, // (default reduction)
   }
 ,
 { // state 84
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+153, // (default reduction)
+MIN_REDUCTION+50, // (default reduction)
   }
 ,
 { // state 85
-2,151, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+112, // (default reduction)
+117,127, // {"0".."9"}
   }
 ,
 { // state 86
-0x80000000|195, // match move
-0x80000000|202, // no-match move
-0x80000000|74, // NT-test-match state for digit
+MIN_REDUCTION+83, // (default reduction)
   }
 ,
 { // state 87
-MIN_REDUCTION+21, // (default reduction)
+2,180, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+132, // (default reduction)
   }
 ,
 { // state 88
-MIN_REDUCTION+219, // (default reduction)
+MIN_REDUCTION+4, // (default reduction)
   }
 ,
 { // state 89
-92,9, // "s"
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+119, // (default reduction)
   }
 ,
 { // state 90
-MIN_REDUCTION+25, // (default reduction)
+MIN_REDUCTION+39, // (default reduction)
   }
 ,
 { // state 91
-MIN_REDUCTION+26, // (default reduction)
+0x80000000|222, // match move
+0x80000000|110, // no-match move
+0x80000000|85, // NT-test-match state for digit
   }
 ,
 { // state 92
-MIN_REDUCTION+73, // (default reduction)
+MIN_REDUCTION+106, // (default reduction)
   }
 ,
 { // state 93
-2,190, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+134, // (default reduction)
+2,48, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+140, // (default reduction)
   }
 ,
 { // state 94
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+113, // (default reduction)
+MIN_REDUCTION+14, // (default reduction)
   }
 ,
 { // state 95
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+155, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+153, // (default reduction)
   }
 ,
 { // state 96
-2,166, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+152, // (default reduction)
+2,169, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+112, // (default reduction)
   }
 ,
 { // state 97
-MIN_REDUCTION+222, // (default reduction)
+0x80000000|219, // match move
+0x80000000|227, // no-match move
+0x80000000|85, // NT-test-match state for digit
   }
 ,
 { // state 98
-MIN_REDUCTION+56, // (default reduction)
+94,236, // "e"
   }
 ,
 { // state 99
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+135, // (default reduction)
+MIN_REDUCTION+21, // (default reduction)
   }
 ,
 { // state 100
-MIN_REDUCTION+51, // (default reduction)
+MIN_REDUCTION+227, // (default reduction)
   }
 ,
 { // state 101
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+147, // (default reduction)
+92,10, // "s"
   }
 ,
 { // state 102
-139,MIN_REDUCTION+100, // $NT
+MIN_REDUCTION+25, // (default reduction)
   }
 ,
 { // state 103
-90,232, // "l"
-107,35, // "x"
+MIN_REDUCTION+26, // (default reduction)
   }
 ,
 { // state 104
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+93, // (default reduction)
+MIN_REDUCTION+73, // (default reduction)
   }
 ,
 { // state 105
-2,67, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+90, // (default reduction)
+2,214, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+134, // (default reduction)
   }
 ,
 { // state 106
-2,125, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+124, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+113, // (default reduction)
   }
 ,
 { // state 107
-106,148, // "o"
+112,212, // "h"
   }
 ,
 { // state 108
-MIN_REDUCTION+103, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+155, // (default reduction)
   }
 ,
 { // state 109
-MIN_REDUCTION+64, // (default reduction)
+2,187, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+152, // (default reduction)
   }
 ,
 { // state 110
-2,150, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+142, // (default reduction)
+MIN_REDUCTION+230, // (default reduction)
   }
 ,
 { // state 111
-94,181, // "e"
+MIN_REDUCTION+56, // (default reduction)
   }
 ,
 { // state 112
-MIN_REDUCTION+18, // (default reduction)
+94,8, // "e"
   }
 ,
 { // state 113
-MIN_REDUCTION+5, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+135, // (default reduction)
   }
 ,
 { // state 114
-139,MIN_REDUCTION+103, // $NT
+MIN_REDUCTION+51, // (default reduction)
   }
 ,
 { // state 115
-106,37, // "o"
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+147, // (default reduction)
   }
 ,
 { // state 116
-139,MIN_REDUCTION+102, // $NT
+145,MIN_REDUCTION+100, // $NT
   }
 ,
 { // state 117
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+163, // (default reduction)
+90,267, // "l"
+109,42, // "x"
   }
 ,
 { // state 118
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+125, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+93, // (default reduction)
   }
 ,
 { // state 119
-MIN_REDUCTION+20, // (default reduction)
+2,76, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+90, // (default reduction)
   }
 ,
 { // state 120
-MIN_REDUCTION+221, // (default reduction)
+2,139, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+124, // (default reduction)
   }
 ,
 { // state 121
-91,206, // "a"
+MIN_REDUCTION+103, // (default reduction)
   }
 ,
 { // state 122
-MIN_REDUCTION+71, // (default reduction)
+MIN_REDUCTION+64, // (default reduction)
   }
 ,
 { // state 123
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+97, // (default reduction)
+2,168, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+142, // (default reduction)
   }
 ,
 { // state 124
-2,118, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+126, // (default reduction)
+94,203, // "e"
   }
 ,
 { // state 125
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+123, // (default reduction)
+MIN_REDUCTION+18, // (default reduction)
   }
 ,
 { // state 126
-2,63, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+160, // (default reduction)
+MIN_REDUCTION+5, // (default reduction)
   }
 ,
 { // state 127
-92,141, // "s"
+145,MIN_REDUCTION+103, // $NT
   }
 ,
 { // state 128
-MIN_REDUCTION+66, // (default reduction)
+106,44, // "o"
   }
 ,
 { // state 129
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+129, // (default reduction)
+145,MIN_REDUCTION+102, // $NT
   }
 ,
 { // state 130
-MIN_REDUCTION+72, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+163, // (default reduction)
   }
 ,
 { // state 131
-MIN_REDUCTION+34, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+125, // (default reduction)
   }
 ,
 { // state 132
-96,189, // "="
+MIN_REDUCTION+20, // (default reduction)
   }
 ,
 { // state 133
-MIN_REDUCTION+11, // (default reduction)
+MIN_REDUCTION+229, // (default reduction)
   }
 ,
 { // state 134
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+127, // (default reduction)
+91,231, // "a"
   }
 ,
 { // state 135
-0x80000000|159, // match move
-0x80000000|108, // no-match move
-0x80000000|74, // NT-test-match state for digit
+MIN_REDUCTION+71, // (default reduction)
   }
 ,
 { // state 136
-2,7, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+110, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+97, // (default reduction)
   }
 ,
 { // state 137
-MIN_REDUCTION+46, // (default reduction)
+2,131, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+126, // (default reduction)
   }
 ,
 { // state 138
-MIN_REDUCTION+48, // (default reduction)
+2,68, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+174, // (default reduction)
   }
 ,
 { // state 139
-0x80000000|36, // match move
-0x80000000|14, // no-match move
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+123, // (default reduction)
+  }
+,
+{ // state 140
+2,72, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+160, // (default reduction)
+  }
+,
+{ // state 141
+92,157, // "s"
+  }
+,
+{ // state 142
+MIN_REDUCTION+66, // (default reduction)
+  }
+,
+{ // state 143
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+129, // (default reduction)
+  }
+,
+{ // state 144
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+171, // (default reduction)
+  }
+,
+{ // state 145
+MIN_REDUCTION+72, // (default reduction)
+  }
+,
+{ // state 146
+MIN_REDUCTION+34, // (default reduction)
+  }
+,
+{ // state 147
+96,213, // "="
+  }
+,
+{ // state 148
+MIN_REDUCTION+11, // (default reduction)
+  }
+,
+{ // state 149
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+127, // (default reduction)
+  }
+,
+{ // state 150
+0x80000000|179, // match move
+0x80000000|121, // no-match move
+0x80000000|85, // NT-test-match state for digit
+  }
+,
+{ // state 151
+91,240, // "a"
+  }
+,
+{ // state 152
+2,7, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+110, // (default reduction)
+  }
+,
+{ // state 153
+MIN_REDUCTION+46, // (default reduction)
+  }
+,
+{ // state 154
+MIN_REDUCTION+48, // (default reduction)
+  }
+,
+{ // state 155
+0x80000000|43, // match move
+0x80000000|18, // no-match move
 // T-test match for "+":
 97,
   }
 ,
-{ // state 140
+{ // state 156
 MIN_REDUCTION+16, // (default reduction)
   }
 ,
-{ // state 141
-0x80000000|1, // match move
-0x80000000|105, // no-match move
-0x80000000|46, // NT-test-match state for idChar
-  }
-,
-{ // state 142
-MIN_REDUCTION+81, // (default reduction)
-  }
-,
-{ // state 143
-115,227, // {10}
-  }
-,
-{ // state 144
-MIN_REDUCTION+62, // (default reduction)
-  }
-,
-{ // state 145
-90,121, // "l"
-  }
-,
-{ // state 146
-MIN_REDUCTION+107, // (default reduction)
-  }
-,
-{ // state 147
-MIN_REDUCTION+59, // (default reduction)
-  }
-,
-{ // state 148
-106,42, // "o"
-  }
-,
-{ // state 149
-MIN_REDUCTION+22, // (default reduction)
-  }
-,
-{ // state 150
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+141, // (default reduction)
-  }
-,
-{ // state 151
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+111, // (default reduction)
-  }
-,
-{ // state 152
-MIN_REDUCTION+12, // (default reduction)
-  }
-,
-{ // state 153
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+157, // (default reduction)
-  }
-,
-{ // state 154
-MIN_REDUCTION+8, // (default reduction)
-  }
-,
-{ // state 155
-2,20, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+144, // (default reduction)
-  }
-,
-{ // state 156
-MIN_REDUCTION+28, // (default reduction)
-  }
-,
 { // state 157
-MIN_REDUCTION+75, // (default reduction)
+0x80000000|1, // match move
+0x80000000|119, // no-match move
+0x80000000|53, // NT-test-match state for idChar
   }
 ,
 { // state 158
-MIN_REDUCTION+65, // (default reduction)
+MIN_REDUCTION+81, // (default reduction)
   }
 ,
 { // state 159
-MIN_REDUCTION+103, // (default reduction)
+107,33, // "r"
   }
 ,
 { // state 160
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+131, // (default reduction)
+121,259, // {10}
   }
 ,
 { // state 161
-118,185, // "&"
+MIN_REDUCTION+62, // (default reduction)
   }
 ,
 { // state 162
-115,146, // {10}
+90,134, // "l"
   }
 ,
 { // state 163
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+91, // (default reduction)
+MIN_REDUCTION+107, // (default reduction)
   }
 ,
 { // state 164
-2,84, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+154, // (default reduction)
+MIN_REDUCTION+59, // (default reduction)
   }
 ,
 { // state 165
-MIN_REDUCTION+87, // (default reduction)
+106,49, // "o"
   }
 ,
 { // state 166
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+151, // (default reduction)
+92,221, // "s"
   }
 ,
 { // state 167
-124,229, // "-"
+MIN_REDUCTION+22, // (default reduction)
   }
 ,
 { // state 168
-102,18, // "d"
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+141, // (default reduction)
   }
 ,
 { // state 169
-MIN_REDUCTION+220, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+111, // (default reduction)
   }
 ,
 { // state 170
-2,205, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+150, // (default reduction)
+107,260, // "r"
+112,247, // "h"
   }
 ,
 { // state 171
-MIN_REDUCTION+6, // (default reduction)
+MIN_REDUCTION+12, // (default reduction)
   }
 ,
 { // state 172
-MIN_REDUCTION+69, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+157, // (default reduction)
   }
 ,
 { // state 173
-MIN_REDUCTION+74, // (default reduction)
+MIN_REDUCTION+8, // (default reduction)
   }
 ,
 { // state 174
-MIN_REDUCTION+54, // (default reduction)
+2,25, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+144, // (default reduction)
   }
 ,
 { // state 175
-MIN_REDUCTION+104, // (default reduction)
+MIN_REDUCTION+28, // (default reduction)
   }
 ,
 { // state 176
-2,78, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+120, // (default reduction)
+92,264, // "s"
   }
 ,
 { // state 177
-MIN_REDUCTION+63, // (default reduction)
+MIN_REDUCTION+75, // (default reduction)
   }
 ,
 { // state 178
-MIN_REDUCTION+88, // (default reduction)
+MIN_REDUCTION+65, // (default reduction)
   }
 ,
 { // state 179
-MIN_REDUCTION+85, // (default reduction)
+MIN_REDUCTION+103, // (default reduction)
   }
 ,
 { // state 180
-MIN_REDUCTION+58, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+131, // (default reduction)
   }
 ,
 { // state 181
-109,44, // "n"
+124,208, // "&"
   }
 ,
 { // state 182
-MIN_REDUCTION+80, // (default reduction)
+2,79, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+166, // (default reduction)
   }
 ,
 { // state 183
-MIN_REDUCTION+23, // (default reduction)
+121,163, // {10}
   }
 ,
 { // state 184
-MIN_REDUCTION+219, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+91, // (default reduction)
   }
 ,
 { // state 185
-2,94, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+114, // (default reduction)
+2,95, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+154, // (default reduction)
   }
 ,
 { // state 186
-MIN_REDUCTION+9, // (default reduction)
+MIN_REDUCTION+87, // (default reduction)
   }
 ,
 { // state 187
-2,213, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+118, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+151, // (default reduction)
   }
 ,
 { // state 188
-MIN_REDUCTION+40, // (default reduction)
+130,262, // "-"
   }
 ,
 { // state 189
-2,104, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+94, // (default reduction)
+2,249, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+178, // (default reduction)
   }
 ,
 { // state 190
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+133, // (default reduction)
+102,22, // "d"
   }
 ,
 { // state 191
-MIN_REDUCTION+82, // (default reduction)
+MIN_REDUCTION+228, // (default reduction)
   }
 ,
 { // state 192
-0x80000000|162, // match move
-0x80000000|16, // no-match move
-// T-test match for 10:
-115,
+2,230, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+150, // (default reduction)
   }
 ,
 { // state 193
-0x80000000|120, // match move
-0x80000000|69, // no-match move
-0x80000000|74, // NT-test-match state for digit
+MIN_REDUCTION+6, // (default reduction)
   }
 ,
 { // state 194
-MIN_REDUCTION+104, // (default reduction)
+MIN_REDUCTION+69, // (default reduction)
   }
 ,
 { // state 195
-100,80, // digit
-111,135, // {"0".."9"}
+MIN_REDUCTION+74, // (default reduction)
   }
 ,
 { // state 196
-2,101, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+148, // (default reduction)
+MIN_REDUCTION+54, // (default reduction)
   }
 ,
 { // state 197
-MIN_REDUCTION+222, // (default reduction)
+MIN_REDUCTION+104, // (default reduction)
   }
 ,
 { // state 198
-0x80000000|167, // match move
-0x80000000|124, // no-match move
-// T-test match for "-":
-124,
+2,89, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+120, // (default reduction)
   }
 ,
 { // state 199
-139,MIN_REDUCTION+99, // $NT
+MIN_REDUCTION+63, // (default reduction)
   }
 ,
 { // state 200
-2,134, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+128, // (default reduction)
+MIN_REDUCTION+88, // (default reduction)
   }
 ,
 { // state 201
-2,99, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+136, // (default reduction)
+MIN_REDUCTION+85, // (default reduction)
   }
 ,
 { // state 202
-MIN_REDUCTION+218, // (default reduction)
+MIN_REDUCTION+58, // (default reduction)
   }
 ,
 { // state 203
-MIN_REDUCTION+10, // (default reduction)
+114,51, // "n"
   }
 ,
 { // state 204
-MIN_REDUCTION+41, // (default reduction)
+94,151, // "e"
   }
 ,
 { // state 205
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+149, // (default reduction)
+MIN_REDUCTION+80, // (default reduction)
   }
 ,
 { // state 206
-92,127, // "s"
+MIN_REDUCTION+23, // (default reduction)
   }
 ,
 { // state 207
-MIN_REDUCTION+45, // (default reduction)
+MIN_REDUCTION+227, // (default reduction)
   }
 ,
 { // state 208
-MIN_REDUCTION+27, // (default reduction)
+2,106, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+114, // (default reduction)
   }
 ,
 { // state 209
-MIN_REDUCTION+57, // (default reduction)
+MIN_REDUCTION+9, // (default reduction)
   }
 ,
 { // state 210
-MIN_REDUCTION+106, // (default reduction)
+2,241, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+118, // (default reduction)
   }
 ,
 { // state 211
-2,123, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+98, // (default reduction)
+MIN_REDUCTION+40, // (default reduction)
   }
 ,
 { // state 212
-96,216, // "="
+105,13, // "i"
   }
 ,
 { // state 213
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+117, // (default reduction)
+2,118, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+94, // (default reduction)
   }
 ,
 { // state 214
-2,163, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+92, // (default reduction)
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+133, // (default reduction)
   }
 ,
 { // state 215
-MIN_REDUCTION+105, // (default reduction)
+MIN_REDUCTION+82, // (default reduction)
   }
 ,
 { // state 216
-2,230, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
-MIN_REDUCTION+146, // (default reduction)
+0x80000000|183, // match move
+0x80000000|20, // no-match move
+// T-test match for 10:
+121,
   }
 ,
 { // state 217
-MIN_REDUCTION+76, // (default reduction)
+0x80000000|133, // match move
+0x80000000|80, // no-match move
+0x80000000|85, // NT-test-match state for digit
   }
 ,
 { // state 218
-MIN_REDUCTION+53, // (default reduction)
+MIN_REDUCTION+104, // (default reduction)
   }
 ,
 { // state 219
-0x80000000|132, // match move
-0x80000000|136, // no-match move
+100,91, // digit
+117,150, // {"0".."9"}
+  }
+,
+{ // state 220
+2,115, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+148, // (default reduction)
+  }
+,
+{ // state 221
+94,189, // "e"
+  }
+,
+{ // state 222
+MIN_REDUCTION+230, // (default reduction)
+  }
+,
+{ // state 223
+0x80000000|188, // match move
+0x80000000|137, // no-match move
+// T-test match for "-":
+130,
+  }
+,
+{ // state 224
+145,MIN_REDUCTION+99, // $NT
+  }
+,
+{ // state 225
+2,149, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+128, // (default reduction)
+  }
+,
+{ // state 226
+2,113, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+136, // (default reduction)
+  }
+,
+{ // state 227
+MIN_REDUCTION+226, // (default reduction)
+  }
+,
+{ // state 228
+MIN_REDUCTION+10, // (default reduction)
+  }
+,
+{ // state 229
+MIN_REDUCTION+41, // (default reduction)
+  }
+,
+{ // state 230
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+149, // (default reduction)
+  }
+,
+{ // state 231
+92,141, // "s"
+  }
+,
+{ // state 232
+MIN_REDUCTION+45, // (default reduction)
+  }
+,
+{ // state 233
+104,243, // "f"
+114,23, // "n"
+  }
+,
+{ // state 234
+MIN_REDUCTION+27, // (default reduction)
+  }
+,
+{ // state 235
+MIN_REDUCTION+57, // (default reduction)
+  }
+,
+{ // state 236
+2,253, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+180, // (default reduction)
+  }
+,
+{ // state 237
+MIN_REDUCTION+106, // (default reduction)
+  }
+,
+{ // state 238
+2,136, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+98, // (default reduction)
+  }
+,
+{ // state 239
+96,245, // "="
+  }
+,
+{ // state 240
+113,138, // "k"
+  }
+,
+{ // state 241
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+117, // (default reduction)
+  }
+,
+{ // state 242
+2,184, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+92, // (default reduction)
+  }
+,
+{ // state 243
+2,265, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+170, // (default reduction)
+  }
+,
+{ // state 244
+MIN_REDUCTION+105, // (default reduction)
+  }
+,
+{ // state 245
+2,263, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+146, // (default reduction)
+  }
+,
+{ // state 246
+MIN_REDUCTION+76, // (default reduction)
+  }
+,
+{ // state 247
+105,176, // "i"
+  }
+,
+{ // state 248
+MIN_REDUCTION+53, // (default reduction)
+  }
+,
+{ // state 249
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+177, // (default reduction)
+  }
+,
+{ // state 250
+0x80000000|147, // match move
+0x80000000|152, // no-match move
 // T-test match for "=":
 96,
   }
 ,
-{ // state 220
+{ // state 251
 MIN_REDUCTION+35, // (default reduction)
   }
 ,
-{ // state 221
+{ // state 252
 MIN_REDUCTION+7, // (default reduction)
   }
 ,
-{ // state 222
+{ // state 253
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+179, // (default reduction)
+  }
+,
+{ // state 254
 MIN_REDUCTION+61, // (default reduction)
   }
 ,
-{ // state 223
-139,MIN_REDUCTION+101, // $NT
+{ // state 255
+145,MIN_REDUCTION+101, // $NT
   }
 ,
-{ // state 224
+{ // state 256
 MIN_REDUCTION+31, // (default reduction)
   }
 ,
-{ // state 225
-91,34, // "a"
+{ // state 257
+91,41, // "a"
   }
 ,
-{ // state 226
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
+{ // state 258
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
 MIN_REDUCTION+95, // (default reduction)
   }
 ,
-{ // state 227
+{ // state 259
 MIN_REDUCTION+107, // (default reduction)
   }
 ,
-{ // state 228
+{ // state 260
+108,98, // "u"
+  }
+,
+{ // state 261
 MIN_REDUCTION+37, // (default reduction)
   }
 ,
-{ // state 229
-2,95, // white*
-112,45, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
+{ // state 262
+2,108, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
 MIN_REDUCTION+156, // (default reduction)
   }
 ,
-{ // state 230
-112,88, // white
-113,194, // {9 12 " "}
-114,215, // eol
-115,210, // {10}
-116,192, // {13}
+{ // state 263
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
 MIN_REDUCTION+145, // (default reduction)
   }
 ,
-{ // state 231
+{ // state 264
+2,12, // white*
+118,52, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+176, // (default reduction)
+  }
+,
+{ // state 265
+118,100, // white
+119,218, // {9 12 " "}
+120,244, // eol
+121,237, // {10}
+122,216, // {13}
+MIN_REDUCTION+169, // (default reduction)
+  }
+,
+{ // state 266
 MIN_REDUCTION+44, // (default reduction)
   }
 ,
-{ // state 232
-92,23, // "s"
+{ // state 267
+92,29, // "s"
   }
 ,
 };
 }
 public TokenGrammarParseTable(TokenGrammar actionObj) {
   actionObject = actionObj;
-  parseTable = new int[233][];
+  parseTable = new int[268][];
   int doneSoFar = 0;
   doneSoFar += new Initter1().doInit(doneSoFar);
 }
@@ -2180,15 +2442,15 @@ private static int[] prodTable = {
 // digit ::= {"0".."9"}
 (100<<16)+1,
 // white ::= {9 12 " "}
-(112<<16)+1,
+(118<<16)+1,
 // white ::= eol
-(112<<16)+1,
+(118<<16)+1,
 // eol ::= {10}
-(114<<16)+1,
+(120<<16)+1,
 // eol ::= {13} {10}
-(114<<16)+2,
+(120<<16)+2,
 // eol ::= {13} !10
-(114<<16)+1,
+(120<<16)+1,
 // `! ::= "!" !"=" white*
 (58<<16)+2,
 // `! ::= "!" !"="
@@ -2301,22 +2563,38 @@ private static int[] prodTable = {
 (8<<16)+5,
 // `void ::= "v" "o" "i" "d"
 (8<<16)+4,
-// `int ::= !255 {255}
-(9<<16)+1,
-// `while ::= !255 {255}
-(10<<16)+1,
-// `if ::= !255 {255}
-(11<<16)+1,
-// `for ::= !255 {255}
-(13<<16)+1,
-// `break ::= !255 {255}
-(14<<16)+1,
-// `this ::= !255 {255}
-(15<<16)+1,
-// `false ::= !255 {255}
-(16<<16)+1,
-// `true ::= !255 {255}
-(17<<16)+1,
+// `int ::= "i" "n" "t" white*
+(9<<16)+4,
+// `int ::= "i" "n" "t"
+(9<<16)+3,
+// `while ::= "w" "h" "i" "l" "e" white*
+(10<<16)+6,
+// `while ::= "w" "h" "i" "l" "e"
+(10<<16)+5,
+// `if ::= "i" "f" white*
+(11<<16)+3,
+// `if ::= "i" "f"
+(11<<16)+2,
+// `for ::= "f" "o" "r" white*
+(13<<16)+4,
+// `for ::= "f" "o" "r"
+(13<<16)+3,
+// `break ::= "b" "r" "e" "a" "k" white*
+(14<<16)+6,
+// `break ::= "b" "r" "e" "a" "k"
+(14<<16)+5,
+// `this ::= "t" "h" "i" "s" white*
+(15<<16)+5,
+// `this ::= "t" "h" "i" "s"
+(15<<16)+4,
+// `false ::= "f" "a" "l" "s" "e" white*
+(16<<16)+6,
+// `false ::= "f" "a" "l" "s" "e"
+(16<<16)+5,
+// `true ::= "t" "r" "u" "e" white*
+(17<<16)+5,
+// `true ::= "t" "r" "u" "e"
+(17<<16)+4,
 // `super ::= !255 {255}
 (18<<16)+1,
 // `null ::= !255 {255}
@@ -2404,9 +2682,9 @@ private static int[] prodTable = {
 // CHAR_LITERAL ::= !255 {255}
 (88<<16)+1,
 // token* ::= token* token
-(136<<16)+2,
+(142<<16)+2,
 // token* ::= token
-(136<<16)+1,
+(142<<16)+1,
 // digit++ ::= digit+ !digit
 (98<<16)+1,
 // white* ::= white* white
@@ -2414,9 +2692,9 @@ private static int[] prodTable = {
 // white* ::= white
 (2<<16)+1,
 // digit+ ::= digit
-(137<<16)+1,
+(143<<16)+1,
 // digit+ ::= digit+ digit
-(137<<16)+2,
+(143<<16)+2,
 // $$0 ::= token*
 (3<<16)+1,
 };
@@ -2431,11 +2709,11 @@ private static int[] charMapTable = {
 -1, // 6
 -1, // 7
 -1, // 8
-113, // 9
-115, // 10
+119, // 9
+121, // 10
 -1, // 11
-113, // 12
-116, // 13
+119, // 12
+122, // 13
 -1, // 14
 -1, // 15
 -1, // 16
@@ -2454,100 +2732,100 @@ private static int[] charMapTable = {
 -1, // 29
 -1, // 30
 -1, // 31
-113, // " "
+119, // " "
 95, // "!"
 -1, // '"'
 -1, // "#"
 -1, // "$"
-117, // "%"
-118, // "&"
+123, // "%"
+124, // "&"
 -1, // "'"
-120, // "("
-121, // ")"
-119, // "*"
+126, // "("
+127, // ")"
+125, // "*"
 97, // "+"
-129, // ","
-124, // "-"
-132, // "."
-134, // "/"
-111, // "0"
-111, // "1"
-111, // "2"
-111, // "3"
-111, // "4"
-111, // "5"
-111, // "6"
-111, // "7"
-111, // "8"
-111, // "9"
-131, // ":"
-133, // ";"
-128, // "<"
+135, // ","
+130, // "-"
+138, // "."
+140, // "/"
+117, // "0"
+117, // "1"
+117, // "2"
+117, // "3"
+117, // "4"
+117, // "5"
+117, // "6"
+117, // "7"
+117, // "8"
+117, // "9"
+137, // ":"
+139, // ";"
+134, // "<"
 96, // "="
-130, // ">"
+136, // ">"
 -1, // "?"
 -1, // "@"
-105, // "A"
-105, // "B"
-105, // "C"
-105, // "D"
-105, // "E"
-105, // "F"
-105, // "G"
-105, // "H"
-105, // "I"
-105, // "J"
-105, // "K"
-105, // "L"
-105, // "M"
-105, // "N"
-105, // "O"
-105, // "P"
-105, // "Q"
-105, // "R"
-105, // "S"
-105, // "T"
-105, // "U"
-105, // "V"
-105, // "W"
-105, // "X"
-105, // "Y"
-105, // "Z"
-125, // "["
+110, // "A"
+110, // "B"
+110, // "C"
+110, // "D"
+110, // "E"
+110, // "F"
+110, // "G"
+110, // "H"
+110, // "I"
+110, // "J"
+110, // "K"
+110, // "L"
+110, // "M"
+110, // "N"
+110, // "O"
+110, // "P"
+110, // "Q"
+110, // "R"
+110, // "S"
+110, // "T"
+110, // "U"
+110, // "V"
+110, // "W"
+110, // "X"
+110, // "Y"
+110, // "Z"
+131, // "["
 -1, // "\"
-126, // "]"
+132, // "]"
 -1, // "^"
 101, // "_"
 -1, // "`"
 91, // "a"
-108, // "b"
+111, // "b"
 89, // "c"
 102, // "d"
 94, // "e"
-105, // "f"
-105, // "g"
-105, // "h"
-104, // "i"
-105, // "j"
-105, // "k"
+104, // "f"
+110, // "g"
+112, // "h"
+105, // "i"
+110, // "j"
+113, // "k"
 90, // "l"
-105, // "m"
-109, // "n"
+110, // "m"
+114, // "n"
 106, // "o"
-105, // "p"
-105, // "q"
-105, // "r"
+110, // "p"
+110, // "q"
+107, // "r"
 92, // "s"
-110, // "t"
-105, // "u"
+115, // "t"
+108, // "u"
 103, // "v"
-105, // "w"
-107, // "x"
-105, // "y"
-105, // "z"
-122, // "{"
-127, // "|"
-123, // "}"
+116, // "w"
+109, // "x"
+110, // "y"
+110, // "z"
+128, // "{"
+133, // "|"
+129, // "}"
 -1, // "~"
 -1, // 127
 -1, // 128
@@ -2677,7 +2955,7 @@ private static int[] charMapTable = {
 -1, // 252
 -1, // 253
 -1, // 254
-135, // 255
+141, // 255
 };
 public String[] getActionProdNameTable() { return actionProdNameTable; }
 private String[] actionProdNameTable = {
@@ -2897,14 +3175,22 @@ private String[] actionProdNameTable = {
 "", // 213
 "", // 214
 "", // 215
-"token* ::= token* token", // 216
-"token* ::= token* token", // 217
-"digit++ ::= digit+ !digit", // 218
-"white* ::= white* white", // 219
-"white* ::= white* white", // 220
-"digit+ ::= digit", // 221
-"digit+ ::= digit+ digit", // 222
+"", // 216
+"", // 217
+"", // 218
+"", // 219
+"", // 220
+"", // 221
+"", // 222
 "", // 223
+"token* ::= token* token", // 224
+"token* ::= token* token", // 225
+"digit++ ::= digit+ !digit", // 226
+"white* ::= white* white", // 227
+"white* ::= white* white", // 228
+"digit+ ::= digit", // 229
+"digit+ ::= digit+ digit", // 230
+"", // 231
 };
 public int[][] getActionTable() { return actionTable; }
 private int[][] actionTable = {
@@ -3916,294 +4202,442 @@ private int[][] actionTable = {
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((4<<5)|0x3)/*popOffPushBack:4*/,
     },
-    { // 165: `int ::= !255 {255} @void
+    { // 165: `int ::= "i" "n" "t" white* @void
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((3<<5)|0x3)/*popOffPushBack:3*/,
+    },
+    { // 166: `int ::= "i" "n" "t" [white*] @void
+      ((2<<5)|0x6)/*nullProductionAction:2*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((3<<5)|0x3)/*popOffPushBack:3*/,
+    },
+    { // 167: `while ::= "w" "h" "i" "l" "e" white* @void
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((5<<5)|0x3)/*popOffPushBack:5*/,
+    },
+    { // 168: `while ::= "w" "h" "i" "l" "e" [white*] @void
+      ((2<<5)|0x6)/*nullProductionAction:2*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((5<<5)|0x3)/*popOffPushBack:5*/,
+    },
+    { // 169: `if ::= "i" "f" white* @void
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((2<<5)|0x3)/*popOffPushBack:2*/,
+    },
+    { // 170: `if ::= "i" "f" [white*] @void
+      ((2<<5)|0x6)/*nullProductionAction:2*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((2<<5)|0x3)/*popOffPushBack:2*/,
+    },
+    { // 171: `for ::= "f" "o" "r" white* @void
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((3<<5)|0x3)/*popOffPushBack:3*/,
+    },
+    { // 172: `for ::= "f" "o" "r" [white*] @void
+      ((2<<5)|0x6)/*nullProductionAction:2*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((3<<5)|0x3)/*popOffPushBack:3*/,
+    },
+    { // 173: `break ::= "b" "r" "e" "a" "k" white* @void
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((5<<5)|0x3)/*popOffPushBack:5*/,
+    },
+    { // 174: `break ::= "b" "r" "e" "a" "k" [white*] @void
+      ((2<<5)|0x6)/*nullProductionAction:2*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((5<<5)|0x3)/*popOffPushBack:5*/,
+    },
+    { // 175: `this ::= "t" "h" "i" "s" white* @void
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((4<<5)|0x3)/*popOffPushBack:4*/,
+    },
+    { // 176: `this ::= "t" "h" "i" "s" [white*] @void
+      ((2<<5)|0x6)/*nullProductionAction:2*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((4<<5)|0x3)/*popOffPushBack:4*/,
+    },
+    { // 177: `false ::= "f" "a" "l" "s" "e" white* @void
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((5<<5)|0x3)/*popOffPushBack:5*/,
+    },
+    { // 178: `false ::= "f" "a" "l" "s" "e" [white*] @void
+      ((2<<5)|0x6)/*nullProductionAction:2*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((5<<5)|0x3)/*popOffPushBack:5*/,
+    },
+    { // 179: `true ::= "t" "r" "u" "e" white* @void
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((4<<5)|0x3)/*popOffPushBack:4*/,
+    },
+    { // 180: `true ::= "t" "r" "u" "e" [white*] @void
+      ((2<<5)|0x6)/*nullProductionAction:2*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((1<<5)|0xe)/*popPos:1*/,
+      ((1<<5)|0x0)/*popToPushBack:1*/,
+      ((4<<5)|0x3)/*popOffPushBack:4*/,
+    },
+    { // 181: `super ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 166: `while ::= !255 {255} @void
+    { // 182: `null ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 167: `if ::= !255 {255} @void
+    { // 183: `return ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 168: `for ::= !255 {255} @void
+    { // 184: `instanceof ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 169: `break ::= !255 {255} @void
+    { // 185: `new ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 170: `this ::= !255 {255} @void
+    { // 186: `abstract ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 171: `false ::= !255 {255} @void
+    { // 187: `assert ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 172: `true ::= !255 {255} @void
+    { // 188: `byte ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 173: `super ::= !255 {255} @void
+    { // 189: `case ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 174: `null ::= !255 {255} @void
+    { // 190: `catch ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 175: `return ::= !255 {255} @void
+    { // 191: `char ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 176: `instanceof ::= !255 {255} @void
+    { // 192: `const ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 177: `new ::= !255 {255} @void
+    { // 193: `continue ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 178: `abstract ::= !255 {255} @void
+    { // 194: `default ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 179: `assert ::= !255 {255} @void
+    { // 195: `do ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 180: `byte ::= !255 {255} @void
+    { // 196: `double ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 181: `case ::= !255 {255} @void
+    { // 197: `enum ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 182: `catch ::= !255 {255} @void
+    { // 198: `final ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 183: `char ::= !255 {255} @void
+    { // 199: `finally ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 184: `const ::= !255 {255} @void
+    { // 200: `float ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 185: `continue ::= !255 {255} @void
+    { // 201: `goto ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 186: `default ::= !255 {255} @void
+    { // 202: `implements ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 187: `do ::= !255 {255} @void
+    { // 203: `import ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 188: `double ::= !255 {255} @void
+    { // 204: `interface ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 189: `enum ::= !255 {255} @void
+    { // 205: `long ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 190: `final ::= !255 {255} @void
+    { // 206: `native ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 191: `finally ::= !255 {255} @void
+    { // 207: `package ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 192: `float ::= !255 {255} @void
+    { // 208: `private ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 193: `goto ::= !255 {255} @void
+    { // 209: `protected ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 194: `implements ::= !255 {255} @void
+    { // 210: `public ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 195: `import ::= !255 {255} @void
+    { // 211: `short ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 196: `interface ::= !255 {255} @void
+    { // 212: `static ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 197: `long ::= !255 {255} @void
+    { // 213: `strictfp ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 198: `native ::= !255 {255} @void
+    { // 214: `switch ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 199: `package ::= !255 {255} @void
+    { // 215: `synchronized ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 200: `private ::= !255 {255} @void
+    { // 216: `throw ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 201: `protected ::= !255 {255} @void
+    { // 217: `throws ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 202: `public ::= !255 {255} @void
+    { // 218: `transient ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 203: `short ::= !255 {255} @void
+    { // 219: `try ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 204: `static ::= !255 {255} @void
+    { // 220: `volatile ::= !255 {255} @void
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x3)/*popOffPushBack:1*/,
     },
-    { // 205: `strictfp ::= !255 {255} @void
-      ((1<<5)|0xe)/*popPos:1*/,
-      ((1<<5)|0x0)/*popToPushBack:1*/,
-      ((1<<5)|0x3)/*popOffPushBack:1*/,
-    },
-    { // 206: `switch ::= !255 {255} @void
-      ((1<<5)|0xe)/*popPos:1*/,
-      ((1<<5)|0x0)/*popToPushBack:1*/,
-      ((1<<5)|0x3)/*popOffPushBack:1*/,
-    },
-    { // 207: `synchronized ::= !255 {255} @void
-      ((1<<5)|0xe)/*popPos:1*/,
-      ((1<<5)|0x0)/*popToPushBack:1*/,
-      ((1<<5)|0x3)/*popOffPushBack:1*/,
-    },
-    { // 208: `throw ::= !255 {255} @void
-      ((1<<5)|0xe)/*popPos:1*/,
-      ((1<<5)|0x0)/*popToPushBack:1*/,
-      ((1<<5)|0x3)/*popOffPushBack:1*/,
-    },
-    { // 209: `throws ::= !255 {255} @void
-      ((1<<5)|0xe)/*popPos:1*/,
-      ((1<<5)|0x0)/*popToPushBack:1*/,
-      ((1<<5)|0x3)/*popOffPushBack:1*/,
-    },
-    { // 210: `transient ::= !255 {255} @void
-      ((1<<5)|0xe)/*popPos:1*/,
-      ((1<<5)|0x0)/*popToPushBack:1*/,
-      ((1<<5)|0x3)/*popOffPushBack:1*/,
-    },
-    { // 211: `try ::= !255 {255} @void
-      ((1<<5)|0xe)/*popPos:1*/,
-      ((1<<5)|0x0)/*popToPushBack:1*/,
-      ((1<<5)|0x3)/*popOffPushBack:1*/,
-    },
-    { // 212: `volatile ::= !255 {255} @void
-      ((1<<5)|0xe)/*popPos:1*/,
-      ((1<<5)|0x0)/*popToPushBack:1*/,
-      ((1<<5)|0x3)/*popOffPushBack:1*/,
-    },
-    { // 213: ID ::= !255 {255} @text
+    { // 221: ID ::= !255 {255} @text
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x4)/*stringConcat:1*/,
     },
-    { // 214: STRING_LITERAL ::= !255 {255} @text
+    { // 222: STRING_LITERAL ::= !255 {255} @text
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0x4)/*stringConcat:1*/,
     },
-    { // 215: CHAR_LITERAL ::= !255 {255} @return0(char)=>int
+    { // 223: CHAR_LITERAL ::= !255 {255} @return0(char)=>int
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((85<<5)|0x5)/*methodCall:85*/,
     },
-    { // 216: token* ::= token* token @append
+    { // 224: token* ::= token* token @append
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0xe)/*popPos:1*/,
     },
-    { // 217: token* ::= [token*] token @append
+    { // 225: token* ::= [token*] token @append
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x6)/*nullProductionAction:1*/,
     },
-    { // 218: digit++ ::= digit+ !digit @pass
+    { // 226: digit++ ::= digit+ !digit @pass
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
     },
-    { // 219: white* ::= white* white @append
+    { // 227: white* ::= white* white @append
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0xe)/*popPos:1*/,
     },
-    { // 220: white* ::= [white*] white @append
+    { // 228: white* ::= [white*] white @append
       ((1<<5)|0xe)/*popPos:1*/,
       ((2<<5)|0x6)/*nullProductionAction:2*/,
     },
-    { // 221: digit+ ::= digit @singleList
+    { // 229: digit+ ::= digit @singleList
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0xa)/*singleList:1*/,
     },
-    { // 222: digit+ ::= digit+ digit @append
+    { // 230: digit+ ::= digit+ digit @append
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0xe)/*popPos:1*/,
       ((1<<5)|0x0)/*popToPushBack:1*/,
       ((1<<5)|0xb)/*append:1*/,
     },
-    { // 223: $$0 ::= token* @pass
+    { // 231: $$0 ::= token* @pass
       ((1<<5)|0xe)/*popPos:1*/,
     },
 };
@@ -4972,6 +5406,12 @@ private int[] symbolSizeTable = {
     1,
     1,
     1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
     -1,
     -1,
     -1,

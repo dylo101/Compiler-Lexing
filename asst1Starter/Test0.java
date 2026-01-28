@@ -29,4 +29,13 @@ class +
 boolean
 extends
 void
+int
+while
+if
+for
+break
+this
+false
+while
+true
 
