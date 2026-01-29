@@ -598,47 +598,47 @@ public class TokenGrammar implements wrangLR.runtime.MessageObject
     //: `this ::= "this" white*
     //: `false ::= "false" white*
     //: `true ::= "true" white*
-    //: `super ::= !{255} {255} => void
-    //: `null ::= !{255} {255} => void
-    //: `return ::= !{255} {255} => void
-    //: `instanceof ::= !{255} {255} => void
-    //: `new ::= !{255} {255} => void
-    //: `abstract ::= !{255} {255} => void
-    //: `assert ::= !{255} {255} => void
-    //: `byte ::= !{255} {255} => void
-    //: `case ::= !{255} {255} => void
-    //: `catch ::= !{255} {255} => void
-    //: `char ::= !{255} {255} => void
-    //: `const ::= !{255} {255} => void
-    //: `continue ::= !{255} {255} => void
-    //: `default ::= !{255} {255} => void
-    //: `do ::= !{255} {255} => void
-    //: `double ::= !{255} {255} => void
-    //: `enum ::= !{255} {255} => void
-    //: `final ::= !{255} {255} => void
-    //: `finally ::= !{255} {255} => void
-    //: `float ::= !{255} {255} => void
-    //: `goto ::= !{255} {255} => void
-    //: `implements ::= !{255} {255} => void
-    //: `import ::= !{255} {255} => void
-    //: `interface ::= !{255} {255} => void
-    //: `long ::= !{255} {255} => void
-    //: `native ::= !{255} {255} => void
-    //: `package ::= !{255} {255} => void
-    //: `private ::= !{255} {255} => void
-    //: `protected ::= !{255} {255} => void
-    //: `public ::= !{255} {255} => void
-    //: `short ::= !{255} {255} => void
-    //: `static ::= !{255} {255} => void
-    //: `strictfp ::= !{255} {255} => void
-    //: `switch ::= !{255} {255} => void
-    //: `synchronized ::= !{255} {255} => void
-    //: `throw ::= !{255} {255} => void
-    //: `throws ::= !{255} {255} => void
-    //: `transient ::= !{255} {255} => void
-    //: `try ::= !{255} {255} => void
-    //: `volatile ::= !{255} {255} => void
-    //: ID ::= !{255} {255} => text
+    //: `super ::= "super" white*
+    //: `null ::= "null" white*
+    //: `return ::= "return" white*
+    //: `instanceof ::= "instanceof" white*
+    //: `new ::= "new" white*
+    //: `abstract ::= "abstract" white*
+    //: `assert ::= "assert" white*
+    //: `byte ::= "byte" white*
+    //: `case ::= "case" white*
+    //: `catch ::= "catch" white*
+    //: `char ::= "char" white*
+    //: `const ::= "const" white*
+    //: `continue ::= "continue" white*
+    //: `default ::= "default" white*
+    //: `do ::= "do" white*
+    //: `double ::= "double" white*
+    //: `enum ::= "enum" white*
+    //: `final ::= "final" white* 
+    //: `finally ::= "finally" white*
+    //: `float ::= "float" white*
+    //: `goto ::= "goto" white*
+    //: `implements ::= "implements" white*
+    //: `import ::= "import" white*
+    //: `interface ::= "interface" white*
+    //: `long ::= "long" white*
+    //: `native ::= "native" white*
+    //: `package ::= "package" white*
+    //: `private ::= "private" white*
+    //: `protected ::= "protected" white*
+    //: `public ::= "public" white*
+    //: `short ::= "short" white*
+    //: `static ::= "static" white*
+    //: `strictfp ::= "strictfp" white*
+    //: `switch ::= "switch" white*
+    //: `synchronized ::= "synchronized" white*
+    //: `throw ::= "throw" white*
+    //: `throws ::= "throws" white*
+    //: `transient ::= "transient" white*
+    //: `try ::= "try" white*
+    //: `volatile ::= "volatile" white*
+    //: ID ::= "ID" white*
     //: STRING_LITERAL ::= !{255} {255} => text
     //: CHAR_LITERAL ::= !{255} {255} => int return0(char)
     
