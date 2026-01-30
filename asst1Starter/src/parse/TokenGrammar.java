@@ -690,7 +690,7 @@ public class TokenGrammar implements wrangLR.runtime.MessageObject
     //: `volatile ::= "volatile" white*
     //: reserved ::= `volatile
     //: ID ::= !reserved letter idChar* white* => text
-
+        
     //: STRING_LITERAL ::= !{255} {255} => text
     //: CHAR_LITERAL ::= !{255} {255} => int return0(char)
     
