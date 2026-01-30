@@ -78,3 +78,6 @@ transient
 try
 volatile
 ID
+stringChar
+STRING_LITERAL
+CHAR_LITERAL

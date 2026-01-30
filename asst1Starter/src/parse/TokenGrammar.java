@@ -587,113 +587,118 @@ public class TokenGrammar implements wrangLR.runtime.MessageObject
     //: `++ ::= "++" white*
     //: `-- ::= "--" white*
     //: `/ ::= "/" white*
-    //: `boolean ::= "boolean" white* 
+    //: `boolean ::= "boolean" !idChar white* 
     //: reserved ::= `boolean
-    //: `extends ::= "extends" white* 
+    //: `extends ::= "extends" !idChar white* 
     //: reserved ::= `extends
-    //: `void ::= "void" white* 
+    //: `void ::= "void" !idChar white* 
     //: reserved ::= `void
-    //: `int ::= "int" white*
+    //: `int ::= "int" !idChar white*
     //: reserved ::= `int
-    //: `while ::= "while" white*
+    //: `while ::= "while" !idChar white*
     //: reserved ::= `while
-    //: `if ::= "if" white*
+    //: `if ::= "if" !idChar white*
     //: reserved ::= `if
-    //: `for ::= "for" white*
+    //: `for ::= "for" !idChar white*
     //: reserved ::= `for
-    //: `break ::= "break" white*
+    //: `break ::= "break" !idChar white*
     //: reserved ::= `break
-    //: `this ::= "this" white*
+    //: `this ::= "this" !idChar white*
     //: reserved ::= `this
-    //: `false ::= "false" white*
+    //: `false ::= "false" !idChar white*
     //: reserved ::= `false
-    //: `true ::= "true" white*
+    //: `true ::= "true" !idChar white*
     //: reserved ::= `true
-    //: `super ::= "super" white*
+    //: `super ::= "super" !idChar white*
     //: reserved ::= `super
-    //: `null ::= "null" white*
+    //: `null ::= "null" !idChar white*
     //: reserved ::= `null
-    //: `return ::= "return" white*
+    //: `return ::= "return" !idChar white*
     //: reserved ::= `return
-    //: `instanceof ::= "instanceof" white*
+    //: `instanceof ::= "instanceof" !idChar white*
     //: reserved ::= `instanceof
-    //: `new ::= "new" white*
+    //: `new ::= "new" !idChar white*
     //: reserved ::= `new
-    //: `abstract ::= "abstract" white*
+    //: `abstract ::= "abstract" !idChar white*
     //: reserved ::= `abstract
-    //: `assert ::= "assert" white*
+    //: `assert ::= "assert" !idChar white*
     //: reserved ::= `assert
-    //: `byte ::= "byte" white*
+    //: `byte ::= "byte" !idChar white*
     //: reserved ::= `byte
-    //: `case ::= "case" white*
+    //: `case ::= "case" !idChar white*
     //: reserved ::= `case
-    //: `catch ::= "catch" white*
+    //: `catch ::= "catch" !idChar white*
     //: reserved ::= `catch
-    //: `char ::= "char" white*
+    //: `char ::= "char" !idChar white*
     //: reserved ::= `char
-    //: `const ::= "const" white*
+    //: `const ::= "const" !idChar white*
     //: reserved ::= `const
-    //: `continue ::= "continue" white*
+    //: `continue ::= "continue" !idChar white*
     //: reserved ::= `continue
-    //: `default ::= "default" white*
+    //: `default ::= "default" !idChar white*
     //: reserved ::= `default
-    //: `do ::= "do" white*
+    //: `do ::= "do" !idChar white*
     //: reserved ::= `do
-    //: `double ::= "double" white*
+    //: `double ::= "double" !idChar white*
     //: reserved ::= `double
-    //: `enum ::= "enum" white*
+    //: `enum ::= "enum" !idChar white*
     //: reserved ::= `enum
-    //: `final ::= "final" white* 
+    //: `final ::= "final" !idChar white* 
     //: reserved ::= `final
-    //: `finally ::= "finally" white*
+    //: `finally ::= "finally" !idChar white*
     //: reserved ::= `finally
-    //: `float ::= "float" white*
+    //: `float ::= "float" !idChar white*
     //: reserved ::= `float
-    //: `goto ::= "goto" white*
+    //: `goto ::= "goto" !idChar white*
     //: reserved ::= `goto
-    //: `implements ::= "implements" white*
+    //: `implements ::= "implements" !idChar white*
     //: reserved ::= `implements
-    //: `import ::= "import" white*
+    //: `import ::= "import" !idChar white*
     //: reserved ::= `import
-    //: `interface ::= "interface" white*
+    //: `interface ::= "interface" !idChar white*
     //: reserved ::= `interface
-    //: `long ::= "long" white*
+    //: `long ::= "long" !idChar white*
     //: reserved ::= `long
-    //: `native ::= "native" white*
+    //: `native ::= "native" !idChar white*
     //: reserved ::= `native
-    //: `package ::= "package" white*
+    //: `package ::= "package" !idChar white*
     //: reserved ::= `package
-    //: `private ::= "private" white*
+    //: `private ::= "private" !idChar white*
     //: reserved ::= `private
-    //: `protected ::= "protected" white*
+    //: `protected ::= "protected" !idChar white*
     //: reserved ::= `protected
-    //: `public ::= "public" white*
+    //: `public ::= "public" !idChar white*
     //: reserved ::= `public
-    //: `short ::= "short" white*
+    //: `short ::= "short" !idChar white*
     //: reserved ::= `short
-    //: `static ::= "static" white*
+    //: `static ::= "static" !idChar white*
     //: reserved ::= `static
-    //: `strictfp ::= "strictfp" white*
+    //: `strictfp ::= "strictfp" !idChar white*
     //: reserved ::= `strictfp
-    //: `switch ::= "switch" white*
+    //: `switch ::= "switch" !idChar white*
     //: reserved ::= `switch
-    //: `synchronized ::= "synchronized" white*
+    //: `synchronized ::= "synchronized" !idChar white*
     //: reserved ::= `synchronized
-    //: `throw ::= "throw" white*
+    //: `throw ::= "throw" !idChar white*
     //: reserved ::= `throw
-    //: `throws ::= "throws" white*
+    //: `throws ::= "throws" !idChar white*
     //: reserved ::= `throws
-    //: `transient ::= "transient" white*
+    //: `transient ::= "transient" !idChar white*
     //: reserved ::= `transient
-    //: `try ::= "try" white*
+    //: `try ::= "try" !idChar white*
     //: reserved ::= `try
-    //: `volatile ::= "volatile" white*
+    //: `volatile ::= "volatile" !idChar white*
     //: reserved ::= `volatile
-    //: ID ::= !reserved letter idChar* white* => text
-        
-    //: STRING_LITERAL ::= !{255} {255} => text
-    //: CHAR_LITERAL ::= !{255} {255} => int return0(char)
+    //: ID ::= !reserved letter idChar** white* => text
+
+    //: stringChar ::= !'"' !'\' printable => pass
+    //: STRING_LITERAL ::= '"' stringChar* '"' white* => text
+
+    //: CHAR_LITERAL ::= "'" stringChar "'" white* =>
     
-    public int return0(char dummy) { return 0; }
+    public int returChar(char c1, char c2, char c3) 
+    {
+        return c2; 
+    }
 
 }
