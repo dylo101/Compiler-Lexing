@@ -532,7 +532,8 @@ public class TokenGrammar implements wrangLR.runtime.MessageObject
     // whitespace
     //: white ::= {" " 9 12} // space or tab or form feed
     //: white ::= eol
-    //: white ::= singleLineComment => pass
+    //: white ::= singleLineComment
+    //: white ::= multiLineComment
 
     // to handle the common end-of-line sequences on different types
     // of systems, we treat the sequence CR+LF as an end of line.
@@ -587,7 +588,7 @@ public class TokenGrammar implements wrangLR.runtime.MessageObject
     //: `; ::= ";" white*
     //: `++ ::= "++" white*
     //: `-- ::= "--" white*
-    //: `/ ::= "/" white*
+    //: `/ ::= "/" !"/" !"*" white*
     //: `boolean ::= "boolean" !idChar white* 
     //: reserved ::= `boolean
     //: `extends ::= "extends" !idChar white* 
@@ -702,8 +703,12 @@ public class TokenGrammar implements wrangLR.runtime.MessageObject
         return c2; 
     }
 
-    //: commentChar ::= !eol printable => pass
-    //: single ::= !"/" "//" commentChar**
-    //: singleLineComment ::= single eol => pass
+    //: commentChar ::= printable 
+    //: comment ::= "//" commentChar** 
+    //: singleLineComment ::= comment eol
+
+    //: multiCommentChar ::= !"*" printable
+    //: multiCommentChar ::= "*" !"/"
+    //: multiLineComment ::= "/*" multiCommentChar** "*/"
 
 }

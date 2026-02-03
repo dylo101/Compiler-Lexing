@@ -81,4 +81,8 @@ ID
 stringChar
 STRING_LITERAL
 CHAR_LITERAL
+commentChar
+comment
 singleLineComment
+multiCommentChar
+multiLineComment
