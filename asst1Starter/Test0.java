@@ -81,3 +81,4 @@ ID
 stringChar
 STRING_LITERAL
 CHAR_LITERAL
+singleLineComment
